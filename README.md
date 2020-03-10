@@ -1,5 +1,10 @@
 # DESARROLLO BACKEND PRUEBA
 
+
+**database** POSTGRESQL 
+**language** Javascript
+**Framework** Node.js
+
 **INSTRUCCIONES** Imaginemos que un cliente solicita el envío de un pedido mediante una llamada a una API REST para
 almacenarlo en la base de datos. El pedido debe contener: Nombre y apellidos del cliente, Email (Único por
 cliente), Teléfono, Dirección de entrega (sólo puede existir una por pedido y muchas por usuario, Fecha de
@@ -30,3 +35,14 @@ ejecutar archivo `docker-compose.yaml` con el comando `docker-compose up -d` par
 *sequelize
 *pg-hstore
 *body-parser
+
+**Nota:** en la carpeta database se encuentra los querys utilizados para el modelo de datos.
+
+
+# Utilización del ORM
+`database -> models -> controllers -> routes -> server(index.js)`
+
+
+## Modelo de base de datos
+
+![Modelo de bae de datos](https://github.com/Dario0117/delivery-system/blob/master/db.png)
