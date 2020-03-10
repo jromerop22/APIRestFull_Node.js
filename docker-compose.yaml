@@ -1,0 +1,42 @@
+version: "3.7"
+services:
+  backend:
+    image: node:latest
+    container_name: backend_prueba
+    working_dir: /code
+    command: [
+      "npm",
+      "run",
+      "dev"
+    ]
+    environment:
+      PORT: 3001
+    volumes:
+      - .:/code
+    ports:
+      - "3001:3001"    
+    depends_on:
+      - postgresql
+  postgresql:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    container_name: postgresql-local
+    volumes:
+      - "/var/run/postgres.sock:/var/run/postgres/postgres.sock"
+      - "/home/myuser/docker-apps/volumes/postgres-data:/var/lib/postgresql/data"
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=test_db
+  pg_admin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin4
+    ports:
+      - "15432:80"
+    environment:
+      - GUNICORN_THREADS=1
+      - PGADMIN_DEFAULT_EMAIL=example@email.com
+      - PGADMIN_DEFAULT_PASSWORD=12345
+    depends_on:
+      - postgresql
