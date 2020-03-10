@@ -45,4 +45,4 @@ ejecutar archivo `docker-compose.yaml` con el comando `docker-compose up -d` par
 
 ## Modelo de base de datos
 
-![Modelo de bae de datos](https://github.com/Dario0117/delivery-system/blob/master/db.png)
+![Modelo de bae de datos](https://github.com/jromerop22/APIRestFull_Node.js/blob/master/src/database/ModeloDatos.png)
