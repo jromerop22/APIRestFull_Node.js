@@ -1,7 +1,6 @@
 # DESARROLLO BACKEND PRUEBA
 
-# INSTRUCCIONES:
-Imaginemos que un cliente solicita el envío de un pedido mediante una llamada a una API REST para
+**INSTRUCCIONES** Imaginemos que un cliente solicita el envío de un pedido mediante una llamada a una API REST para
 almacenarlo en la base de datos. El pedido debe contener: Nombre y apellidos del cliente, Email (Único por
 cliente), Teléfono, Dirección de entrega (sólo puede existir una por pedido y muchas por usuario, Fecha de
 entrega y Franja de hora seleccionada para la entrega (variable, pueden ser desde franjas de 1h hasta de 8h)
